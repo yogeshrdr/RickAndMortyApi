@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/pagination.css">
+    <link rel="stylesheet" href="css/select.css">
+    <title>RickAndMorty</title>
+    <script src="js/index.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <div>
+        <header class="navHead">
+            <nav class="navbar">
+                <div>
+                    <a href="/">
+                        <img src="img/logo.png" alt="Logo" width="60" height="60">
+                    </a>
+                </div>
+                <div class="searchBar">
+                    <input class="search" type="text" id="search" name="search" placeholder="Search">
+                </div>
+            </nav>
+        </header>
+
+        <div class="hero">
+            <img class="heroBackground" src="img/hero.png" alt="hero" width="100" height="100">
+            <div class="heroTitle">The Rick and Morty API</h1>
+        </div>
+    </div>
+
+    <div class="statusHolder">
+        <div class="statusHeading">Status</div>
+        <select class="statusFilter" name="statusFilter" id="status" onchange="statusChange()">
+            <option value="All">All</option>
+            <option value="Alive">Alive</option>
+            <option value="Dead">Dead</option>
+            <option value="Unknown">Unkown</option>
+        </select>
+    </div>
+
+    <div class="cardHolderConatiner">
+        <div class = "cardHolder" id="cardContainer"></div>
+    </div>
+
+    <div class="paginationMain">
+        <div class="pagination" id="pagination"></div>
+    </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+.cardHolderConatiner{
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cardHolder{
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    grid-gap: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cardHolder{
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    grid-gap: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.card {
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px rgb(255, 119, 119);
+    transition: box-shadow .6s ease-out;
+    box-shadow: .8px .9px 3px rgb(255, 119, 119);
+}
+
+.card:hover{
+    box-shadow: 1px 8px 10px rgb(255, 119, 119);
+    transition: box-shadow .6s ease-in;
+}
+  
+.card img {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 100;
+}
+
+.cardText{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+.cardText > h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.cardText > h2{
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.cardStatus{
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.cardText > h3{
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.cardText > p{
+    font-size: 15px;
+    font-weight: 200;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.statusCircle{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.statusCircleAlive{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(28, 231, 28);
+    border-radius: 10px;
+}
+
+.statusCircleDead{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 83, 83);
+    border-radius: 10px;
+}
+
+.statusTitle{
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .cardHolder{
+        grid-template-columns: 22% 22% 22% 22%;
+    }
+} 
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) { 
+    .cardHolder{
+        grid-template-columns: 35% 35%;
+    }
+}
+
+
+
+@media only screen and (max-width: 991px) {
+    .cardHolder{
+        grid-template-columns: 60%;
+    }
+} 
+  
+  

@@ -1,0 +1,22 @@
+.statusHolder{
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.statusHeading{
+    color: white;
+}
+
+.statusFilter{
+    padding: 10px;
+    border: 1px solid rgb(255, 15, 15);
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    color: white;
+}
+
+.statusFilter > option{
+    color: black;
+    background-color: white;
+}
