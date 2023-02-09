@@ -1,4 +1,5 @@
-.cardHolderConatiner{
+
+.cardHolderConatiner {
     padding: 20px;
     display: flex;
     align-items: center;
@@ -6,7 +7,7 @@
     margin-right: auto;
 }
 
-.cardHolder{
+.cardHolder {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
@@ -23,7 +24,7 @@
     box-shadow: .8px .9px 3px rgb(255, 119, 119);
 }
 
-.card:hover{
+.card:hover {
     box-shadow: 1px 8px 10px rgb(255, 119, 119);
     transition: box-shadow .6s ease-in;
 }
@@ -35,25 +36,25 @@
     z-index: 100;
 }
 
-.cardText{
+.cardText {
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
 }
 
-.cardText > h1{
+.cardText > h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     font-weight: 700;
     margin: 0;
 }
 
-.cardText > h2{
+.cardText > h2 {
     font-size: 22px;
     font-weight: 300;
     margin: 0;
 }
 
-.cardStatus{
+.cardStatus {
     font-size: 15px;
     font-weight: 700;
     margin: 0;

@@ -1,22 +1,16 @@
+const BASE_URL = "https://rickandmortyapi.com/api/character";
+
 export default{
-    async getData(){
-        const response = await fetch("https://rickandmortyapi.com/api/character");
-        return response.json();
+    async getCharacters(){
+        return await fetch(BASE_URL)
+        .then(response => response.json());
     },
-    async getDataById(id){
-        const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
-        return response.json();
+    async getCharactersById(id){
+       return await fetch(`${BASE_URL}/${id}`)
+       .then(response => response.json());
     },
-    async getDataByName(name){
-        const response = await fetch(`https://rickandmortyapi.com/api/character?name=${name}`);
-        return response.json();
-    },
-    async getDataByPage(page){
-        const response = await fetch(`https://rickandmortyapi.com/api/character?page=${page}`);
-        return response.json();
-    },
-    async getDataByPageandName(page, name){
-        const response = await fetch(`https://rickandmortyapi.com/api/character?page=${page}&name=${name}`);
-        return response.json();
+    async getCharactersByFilter(page, name){
+        return await fetch(`${BASE_URL}?page=${page}&name=${name}`)
+        .then(response => response.json());
     }
 };

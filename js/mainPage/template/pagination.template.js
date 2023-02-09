@@ -1,6 +1,5 @@
 
 const paginationBody = (totalPages, pageId, filter) => {
-    //cases
     const container = document.getElementById("pagination");
     container.innerHTML = "";
     

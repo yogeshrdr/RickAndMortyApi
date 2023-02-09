@@ -1,6 +1,6 @@
 import content from "./template/cards.template.js";
-import searchTempalate from "./template/search.template.js";
 import paginationBody from './template/pagination.template.js';
+import searchTempalate from "./template/search.template.js";
 
 class MainView{
     constructor(selector, searchContainerSelector, searchSelector){

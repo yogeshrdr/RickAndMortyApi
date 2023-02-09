@@ -4,16 +4,14 @@ class MainController {
     constructor(model, view) {
       this.model = model;
       this.view = view;
-      // this.handleCard();
       this.handleSearch();
       this.handlePagination();
     };
   
     handleCard = async() => {
-        const data = await API.getData();
+        const data = await API.getCharacters();
         this.model.changeData(data, "");
-        console.log(data);
-        this.view.displayCards(data.results);
+        this.view.displayCards(this.model.cards);
         this.view.displayPagination(data.info.pages, 1, "");
     };
 
@@ -21,11 +19,11 @@ class MainController {
       this.view.searchContent.addEventListener("keyup",() => {
           let timeOut;
           clearTimeout(timeOut);
-          
+
           timeOut = setTimeout(async() => {
-            const data = await API.getDataByName(this.view.searchContent.value);
+            const data = await API.getCharactersByFilter(1, this.view.searchContent.value);
             this.model.changeData(data, this.view.searchContent.value);
-            this.view.displayCards(data.results);
+            this.view.displayCards(this.model.cards);
             this.view.displayPagination(data.info.pages, 1, this.view.searchContent.value);
           }, 2000);
       });
@@ -35,30 +33,27 @@ class MainController {
         var page = this.model.page;
         var name = this.model.name;
         if(page && name){
-            const data = await API.getDataByPageandName(page, name);
+            const data = await API.getCharactersByFilter(page, name);
             this.model.changeData(data, name);
             this.view.searchContent.value = name;
-            this.view.displayCards(data.results);
+            this.view.displayCards(this.model.cards);
             this.view.displayPagination(data.info.pages, page, name);
-            console.log(1);
         }
         else if(page){
-            const data = await API.getDataByPage(page);
+            const data = await API.getCharactersByFilter(page,"");
             this.model.changeData(data, "");
-            this.view.displayCards(data.results);
+            this.view.displayCards(this.model.cards);
             this.view.displayPagination(data.info.pages, page, "");
-            console.log(2);
         }else if(name){
-            const data = await API.getDataByName(name);
+            const data = await API.getCharactersByFilter(1, name);
             this.model.changeData(data, name);
             this.view.searchContent.value = name;
-            this.view.displayCards(data.results);
+            this.view.displayCards(this.model.cards);
             this.view.displayPagination(data.info.pages, 1, name);
-            console.log(3);
         }else{
           this.handleCard();
         }
     }
-}
+};
 
 export default MainController;

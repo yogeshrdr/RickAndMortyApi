@@ -24,7 +24,6 @@ class CardView{
     displayCard(data){
         this.viewContent.display = 'flex';
         this.viewContent.innerHTML = "";
-        console.log(this.selector);
         if(data == null){
             this.viewContent.innerHTML += `<div class="loading">LoadingContent......</div>`;
         }else{

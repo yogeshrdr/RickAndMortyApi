@@ -9,9 +9,9 @@ class DetailsController {
     };
   
     handleCard = async() => {
-        const data = await API.getDataById(this.id);
+        const data = await API.getCharactersById(this.id);
         this.model.changeData(data);
-        this.view.displayCard(data);
+        this.view.displayCard(this.model.card);
     };
 }
 
